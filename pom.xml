@@ -6,14 +6,14 @@
     <artifactId>chat-example</artifactId>
     <packaging>jar</packaging>
     <version>0.1.0-SNAPSHOT</version>
+
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-
         <jeromq.version>0.5.1</jeromq.version>
     </properties>
-    <dependencies>
 
+    <dependencies>
         <dependency>
             <groupId>org.zeromq</groupId>
             <artifactId>jeromq</artifactId>
