@@ -4,13 +4,16 @@ import javafx.util.Pair;
 import org.zeromq.*;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static lab7.CommandService.*;
 
 public class Proxy {
 
-    private static final List<StorageInfo> storages = new ArrayList<>();
+    //private static final List<StorageInfo> storages = new ArrayList<>();
+    private static final Map<String, StorageInfo> storages = new HashMap<>();
     private static ZMQ.Socket frontend;
     private static ZMQ.Socket backend;
 
@@ -53,8 +56,8 @@ public class Proxy {
 
                 if (cmdType == CommandType.CONNECT) {
                     Pair<Integer, Integer> range = CommandService.parseConnectCommand(cmd);
-                    storages.add(new StorageInfo(
-                            id, address, range.getKey(), range.getValue(), System.currentTimeMillis()
+                    storages.put(id, new StorageInfo(
+                            address, range.getKey(), range.getValue(), System.currentTimeMillis()
                     ));
                 } else if (cmdType == CommandType.NOTIFY) {
 
