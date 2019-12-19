@@ -41,6 +41,7 @@ public class Storage {
                 System.out.println("NOTIFY");
 
                 heartbeatTime = System.currentTimeMillis() + HEARTBEAT_TIMEOUT;
+                socket
             }
         }
     }
