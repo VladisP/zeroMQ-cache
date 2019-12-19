@@ -48,7 +48,7 @@ public class Proxy {
                 CommandType cmdType = CommandService.getCommandType(cmd);
 
                 if (cmdType == CommandType.CONNECT) {
-                    Pair<Integer, Integer> 
+                    Pair<Integer, Integer> range;//TODO
                 }
             }
         }

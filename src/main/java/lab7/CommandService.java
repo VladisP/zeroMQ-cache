@@ -1,5 +1,7 @@
 package lab7;
 
+import javafx.util.Pair;
+
 import java.util.regex.Pattern;
 
 public class CommandService {
@@ -41,5 +43,11 @@ public class CommandService {
 
     public static String makeNotifyCommand() {
         return "NOTIFY";
+    }
+
+    public Pair<Integer, Integer> parseConnectCommand(String cmd) {
+        String[] cmdParts = cmd.split(" ");
+
+        return new Pair<Integer, Integer>(cmdParts[1], cmdParts[2]);
     }
 }
