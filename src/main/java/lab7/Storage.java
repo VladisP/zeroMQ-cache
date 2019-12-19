@@ -6,12 +6,12 @@ import org.zeromq.ZMQ;
 
 public class Storage {
 
-    public final static String STORAGE_ADDRESS = ""
+    public final static String STORAGE_ADDRESS = "tcp://localhost:5556";
 
     public static void main(String[] args) {
         ZContext context = new ZContext();
         ZMQ.Socket socket = context.createSocket(SocketType.DEALER);
-        socket.connect()
+        socket.connect(STORAGE_ADDRESS);
 
         int startCell = Integer.parseInt(args[0]);
         int endCell = Integer.parseInt(args[1]);
