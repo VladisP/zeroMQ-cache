@@ -10,8 +10,6 @@ public class Client {
 
     private final static String CLIENT_ADDRESS = "tcp://localhost:5555";
 
-    private static 
-
     public static void main(String[] args) {
         ZContext context = new ZContext();
         ZMQ.Socket socket = null;
