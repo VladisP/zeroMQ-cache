@@ -9,7 +9,9 @@ import java.util.Map;
 
 public class Storage {
 
-    public final static String STORAGE_ADDRESS = "tcp://localhost:5556";
+    private static final int HEARTBEAT_TIMEOUT = 3000;
+
+    public static final String STORAGE_ADDRESS = "tcp://localhost:5556";
 
     private static void sendConnectCommand(ZMQ.Socket socket, int start, int end) {
         socket.send(CommandService.makeConnectCommand(start, end), 0);
@@ -26,7 +28,7 @@ public class Storage {
         int startCell = Integer.parseInt(args[0]);
         int endCell = Integer.parseInt(args[1]);
 
-        long heartbeatTime = System.currentTimeMillis() + 
+        long heartbeatTime = System.currentTimeMillis() + HEARTBEAT_TIMEOUT;
         sendConnectCommand(socket, startCell, endCell);
 
         System.out.println("Хранилище настроено");
