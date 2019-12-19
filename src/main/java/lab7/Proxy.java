@@ -1,5 +1,6 @@
 package lab7;
 
+import org.zeromq.SocketType;
 import org.zeromq.ZContext;
 import org.zeromq.ZMQ;
 
@@ -15,6 +16,6 @@ public class Proxy {
     public static void main(String[] args) {
         //TODO: try..catch
         ZContext context = new ZContext();
-        frontend = context.createSocket()
+        frontend = context.createSocket(SocketType.ROUTER);
     }
 }
