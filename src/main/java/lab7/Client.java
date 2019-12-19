@@ -10,7 +10,13 @@ public class Client {
 
     public static void main(String[] args) {
         ZContext context = new ZContext();
-        ZMQ.Socket socket = context.createSocket(SocketType.REQ);
-        socket.connect(CLIENT_ADDRESS);
+        ZMQ.Socket socket = null;
+
+        try {
+            socket = context.createSocket(SocketType.REQ);
+            socket.connect(CLIENT_ADDRESS);
+        } finally {
+            
+        }
     }
 }
