@@ -1,9 +1,6 @@
 package lab7;
 
-import org.zeromq.SocketType;
-import org.zeromq.ZContext;
-import org.zeromq.ZMQ;
-import org.zeromq.ZMsg;
+import org.zeromq.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,6 +33,7 @@ public class Proxy {
 
             if (items.pollin(1)) {
                 ZMsg msg = ZMsg.recvMsg(backend);
+                ZFrame 
             }
         }
     }
