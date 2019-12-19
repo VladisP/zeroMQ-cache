@@ -4,11 +4,11 @@ import java.util.regex.Pattern;
 
 public class CommandService {
 
-    private static Pattern SET_COMMAND_PATTERN = Pattern.compile("SET \\d+ \\d+");
-    private static Pattern GET_COMMAND_PATTERN = Pattern.compile("GET \\d+");
-    private static Pattern EXIT_COMMAND_PATTERN = Pattern.compile();
+    private static Pattern SET_COMMAND_PATTERN = Pattern.compile("SET \\d+ \\d+", Pattern.CASE_INSENSITIVE);
+    private static Pattern GET_COMMAND_PATTERN = Pattern.compile("GET \\d+", Pattern.CASE_INSENSITIVE);
+    private static Pattern EXIT_COMMAND_PATTERN = Pattern.compile("F", Pattern.CASE_INSENSITIVE);
 
-    public static enum CommandType {
+    public enum CommandType {
         GET,
         SET,
         EXIT,
@@ -16,6 +16,6 @@ public class CommandService {
     }
 
     public static CommandType getCommandType(String cmd) {
-        Pattern pattern = Pattern.compile("SET \\d+ \\d+");
+        
     }
 }
