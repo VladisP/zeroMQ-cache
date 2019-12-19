@@ -9,7 +9,7 @@ import java.util.Map;
 
 public class Storage {
 
-    private static final int HEARTBEAT_TIMEOUT = 3000;
+    public static final int HEARTBEAT_TIMEOUT = 3000;
 
     public static final String STORAGE_ADDRESS = "tcp://localhost:5556";
 

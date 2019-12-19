@@ -22,6 +22,6 @@ public class StorageInfo {
     }
 
     public boolean isDead() {
-        return heartbeatTime + 2 * 
+        return heartbeatTime + 2 * Storage.HEARTBEAT_TIMEOUT
     }
 }
