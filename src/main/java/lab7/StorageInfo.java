@@ -4,5 +4,6 @@ import org.zeromq.ZFrame;
 
 public class StorageInfo {
     private ZFrame address;
-    private 
+    private int start;
+    private int end;
 }
