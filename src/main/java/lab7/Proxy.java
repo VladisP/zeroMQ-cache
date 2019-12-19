@@ -52,6 +52,8 @@ public class Proxy {
                     storages.add(new StorageInfo(
                             id, address, range.getKey(), range.getValue(), System.currentTimeMillis()
                     ));
+                } else if (cmdType == CommandType.NOTIFY) {
+
                 }
             }
         }
