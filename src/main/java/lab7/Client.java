@@ -7,6 +7,6 @@ public class Client {
 
     public static void main(String[] args) {
         ZContext context = new ZContext();
-        ZMQ.Socket
+        ZMQ.Socket socket 
     }
 }
