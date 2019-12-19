@@ -4,6 +4,9 @@ import org.zeromq.SocketType;
 import org.zeromq.ZContext;
 import org.zeromq.ZMQ;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Storage {
 
     public final static String STORAGE_ADDRESS = "tcp://localhost:5556";
@@ -14,7 +17,7 @@ public class Storage {
 
     public static void main(String[] args) {
         //TODO: try..catch
-        Map<Integer, Integer> 
+        Map<Integer, Integer> storage = new HashMap<>();
 
         ZContext context = new ZContext();
         ZMQ.Socket socket = context.createSocket(SocketType.DEALER);
