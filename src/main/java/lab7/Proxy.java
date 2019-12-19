@@ -15,6 +15,6 @@ public class Proxy {
     public static void main(String[] args) {
         //TODO: try..catch
         ZContext context = new ZContext();
-        
+        frontend = context.createSocket()
     }
 }
