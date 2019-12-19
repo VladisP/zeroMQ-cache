@@ -1,4 +1,6 @@
 package lab7;
 
-public class CommandParser {
+public class CommandService {
+
+    public static Enum
 }
