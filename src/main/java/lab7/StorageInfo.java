@@ -20,4 +20,8 @@ public class StorageInfo {
     public void setHeartbeatTime(long heartbeatTime) {
         this.heartbeatTime = heartbeatTime;
     }
+
+    public boolean isDead() {
+        
+    }
 }
