@@ -33,7 +33,7 @@ public class Proxy {
 
             if (items.pollin(1)) {
                 ZMsg msg = ZMsg.recvMsg(backend);
-                msg.unwrap()
+                ZFrame  msg.unwrap()
             }
         }
     }
