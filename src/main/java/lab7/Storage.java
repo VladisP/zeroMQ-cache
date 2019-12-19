@@ -33,7 +33,7 @@ public class Storage {
 
         System.out.println("Хранилище настроено");
 
-        while (!) {
+        while (!Thread.currentThread()) {
 
         }
     }
