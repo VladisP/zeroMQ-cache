@@ -69,7 +69,7 @@ public class Proxy {
                             address, range.getKey(), range.getValue(), System.currentTimeMillis()
                     ));
                 } else if (cmdType == CommandType.NOTIFY) {
-
+                    updateHeartbeatTime(id);
                 }
             }
         }
