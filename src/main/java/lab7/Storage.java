@@ -35,7 +35,7 @@ public class Storage {
 
         while (!Thread.currentThread().isInterrupted()) {
             String cmd = socket.recvStr(0);
-            
+            System.out.println(cmd);
         }
     }
 }
