@@ -49,7 +49,9 @@ public class Proxy {
 
                 if (cmdType == CommandType.CONNECT) {
                     Pair<String, String> range = CommandService.parseConnectCommand(cmd);
-                    storages.add()
+                    storages.add(new StorageInfo(
+                            
+                    ));
                 }
             }
         }
