@@ -14,6 +14,10 @@ public class Proxy {
     private static ZMQ.Socket frontend;
     private static ZMQ.Socket backend;
 
+    private static void updateHeartbeatTime() {
+
+    }
+
     public static void main(String[] args) {
         //TODO: try..catch
         ZContext context = new ZContext();
@@ -53,7 +57,7 @@ public class Proxy {
                             id, address, range.getKey(), range.getValue(), System.currentTimeMillis()
                     ));
                 } else if (cmdType == CommandType.NOTIFY) {
-                    
+
                 }
             }
         }
