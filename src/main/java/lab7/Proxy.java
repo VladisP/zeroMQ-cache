@@ -40,5 +40,9 @@ public class Proxy {
                 System.out.println(msg.toString());
             }
         }
+
+        context.destroySocket(frontend);
+        context.destroySocket(backend);
+        context.destroy();
     }
 }

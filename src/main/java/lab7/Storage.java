@@ -48,5 +48,8 @@ public class Storage {
                 sendNotifyCommand(socket);
             }
         }
+
+        context.destroySocket(socket);
+        context.destroy();
     }
 }
