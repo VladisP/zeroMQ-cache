@@ -21,6 +21,8 @@ public class Storage {
         int startCell = Integer.parseInt(args[0]);
         int endCell = Integer.parseInt(args[1]);
 
+        socket.send()
+
         System.out.println("Хранилище настроено");
 
 
