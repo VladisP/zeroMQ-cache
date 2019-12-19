@@ -18,7 +18,7 @@ public class Proxy {
     private static ZMQ.Socket backend;
 
     private static void updateHeartbeatTime(String id) {
-        storages.get(id)
+        storages.get(id).setHeartbeatTime(System.currentTimeMillis());
     }
 
     public static void main(String[] args) {

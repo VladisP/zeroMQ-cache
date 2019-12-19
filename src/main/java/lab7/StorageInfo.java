@@ -3,7 +3,7 @@ package lab7;
 import org.zeromq.ZFrame;
 
 public class StorageInfo {
-//    private String id;
+    //    private String id;
     private ZFrame address;
     private int start;
     private int end;
@@ -14,6 +14,10 @@ public class StorageInfo {
         this.address = address;
         this.start = start;
         this.end = end;
+        this.heartbeatTime = heartbeatTime;
+    }
+
+    public void setHeartbeatTime(long heartbeatTime) {
         this.heartbeatTime = heartbeatTime;
     }
 }
