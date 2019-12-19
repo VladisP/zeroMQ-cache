@@ -30,6 +30,7 @@ public class Proxy {
             if (items.pollin(0)) {
                 //TODO: пока ничего
                 ZMsg msg = ZMsg.recvMsg(frontend);
+                System.out.println("LEN: " + msg.size());
                 System.out.println(msg.toString());
             }
 
@@ -38,7 +39,8 @@ public class Proxy {
                 ZFrame address = msg.unwrap();
                 String id = new String(address.getData(), ZMQ.CHARSET);
 
-                System.out.println(id + " " + msg.toString());
+                System.out.println("LEN: " + msg.size());
+                System.out.println(id + "|" + msg.toString());
             }
         }
 
