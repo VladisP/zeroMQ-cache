@@ -7,4 +7,8 @@ public class StorageInfo {
     private int start;
     private int end;
     private long heartbeatTime;
+
+    public StorageInfo() {
+
+    }
 }
