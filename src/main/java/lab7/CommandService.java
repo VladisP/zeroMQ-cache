@@ -2,5 +2,7 @@ package lab7;
 
 public class CommandService {
 
-    public static enum 
+    public static enum CommandType {
+        
+    }
 }
