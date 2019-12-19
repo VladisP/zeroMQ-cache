@@ -44,7 +44,7 @@ public class Client {
                 }
 
                 socket.send(cmd, 0);
-                String 
+                String reply = 
             }
         } finally {
             context.destroySocket(socket);
