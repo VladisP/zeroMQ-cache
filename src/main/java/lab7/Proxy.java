@@ -22,7 +22,9 @@ public class Proxy {
     }
 
     private static void removeDeadStorages() {
-        
+        for (StorageInfo info) {
+
+        }
     }
 
     public static void main(String[] args) {
