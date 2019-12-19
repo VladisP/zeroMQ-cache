@@ -14,8 +14,8 @@ public class Proxy {
     private static ZMQ.Socket frontend;
     private static ZMQ.Socket backend;
 
-    private static void updateHeartbeatTime() {
-
+    private static void updateHeartbeatTime(String id) {
+        
     }
 
     public static void main(String[] args) {
