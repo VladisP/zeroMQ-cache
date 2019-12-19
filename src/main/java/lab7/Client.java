@@ -15,6 +15,7 @@ public class Client {
         try {
             socket = context.createSocket(SocketType.REQ);
             socket.connect(CLIENT_ADDRESS);
+            //TODO
         } finally {
             context.destroySocket(socket);
             context.destroy();
