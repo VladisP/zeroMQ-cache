@@ -25,6 +25,10 @@ public class Client {
                 String cmd = in.nextLine();
                 CommandType cmdType = CommandService.getCommandType(cmd);
 
+                if (cmdType == CommandType.EXIT) {
+                    break;
+                }
+
                 
             }
         } finally {
