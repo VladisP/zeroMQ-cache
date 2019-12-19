@@ -23,6 +23,6 @@ public class Proxy {
         backend.bind(Storage.STORAGE_ADDRESS);
 
         ZMQ.Poller items = context.createPoller(2);
-        
+        items.register()
     }
 }
