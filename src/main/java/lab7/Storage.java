@@ -9,7 +9,7 @@ public class Storage {
     public final static String STORAGE_ADDRESS = "tcp://localhost:5556";
 
     private static void sendConnectCommand(ZMQ.Socket socket, int start, int end) {
-        socket.send("CONNECT " + start + " " + end, 0);
+        socket.send(CommandService.makeConnectCommand(start, end), 0);
     }
 
     public static void main(String[] args) {
