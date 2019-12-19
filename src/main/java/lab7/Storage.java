@@ -17,8 +17,8 @@ public class Storage {
         socket.send(CommandService.makeConnectCommand(start, end), 0);
     }
 
-    private static void sendNotifyCommand() {
-
+    private static void sendNotifyCommand(ZMQ.Socket socket) {
+        socket.send(CommandService.makeNotifyCommand(), 0);
     }
 
     public static void main(String[] args) {
@@ -45,7 +45,7 @@ public class Storage {
                 System.out.println("NOTIFY");
 
                 heartbeatTime = System.currentTimeMillis() + HEARTBEAT_TIMEOUT;
-                //
+                sendNotifyCommand(socket);
             }
         }
     }
