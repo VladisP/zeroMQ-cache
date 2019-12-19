@@ -8,7 +8,10 @@ public class StorageInfo {
     private int end;
     private long heartbeatTime;
 
-    public StorageInfo(ZFrame address, ) {
-
+    public StorageInfo(ZFrame address, int start, int end, long heartbeatTime) {
+        this.address = address;
+        this.start = start;
+        this.end = end;
+        this.heartbeatTime = heartbeatTime;
     }
 }
