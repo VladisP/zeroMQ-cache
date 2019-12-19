@@ -34,6 +34,7 @@ public class Proxy {
             if (items.pollin(1)) {
                 ZMsg msg = ZMsg.recvMsg(backend);
                 ZFrame address = msg.unwrap();
+                String id = address.getData()
             }
         }
     }
