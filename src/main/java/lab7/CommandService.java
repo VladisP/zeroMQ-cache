@@ -17,6 +17,8 @@ public class CommandService {
     }
 
     public static CommandType getCommandType(String cmd) {
-        Matcher matcher = 
+        if () {
+
+        }
     }
 }
