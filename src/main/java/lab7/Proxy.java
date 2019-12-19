@@ -35,7 +35,7 @@ public class Proxy {
             }
 
             if (items.pollin(1)) {
-                ZMsg 
+                ZMsg msg 
             }
         }
     }
