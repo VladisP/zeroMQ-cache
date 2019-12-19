@@ -47,7 +47,7 @@ public class Proxy {
                 CommandType cmdType = CommandService.getCommandType(cmd);
 
                 if (cmdType == CommandType.CONNECT) {
-                    
+
                 }
             }
         }
