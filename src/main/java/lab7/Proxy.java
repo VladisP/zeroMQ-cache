@@ -5,6 +5,8 @@ import org.zeromq.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import static lab7.CommandService.*;
+
 public class Proxy {
 
     private static final List<StorageInfo> storages = new ArrayList<>();
@@ -42,10 +44,10 @@ public class Proxy {
                 //System.out.println("LEN: " + msg.size());
                 //System.out.println(id + "|" + msg.toString());
                 String cmd = new String(msg.getFirst().getData(), ZMQ.CHARSET);
-                
+                CommandType cmdType = CommandService.getCommandType(cmd);
 
-                if () {
-
+                if (cmdType == CommandType.CONNECT) {
+                    
                 }
             }
         }
