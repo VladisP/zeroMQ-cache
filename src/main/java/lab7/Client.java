@@ -43,7 +43,7 @@ public class Client {
                     continue;
                 }
 
-                socket.send()
+                socket.send(cmd)
             }
         } finally {
             context.destroySocket(socket);
