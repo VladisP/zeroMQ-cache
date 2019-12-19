@@ -34,7 +34,7 @@ public class Storage {
         System.out.println("Хранилище настроено");
 
         while (!Thread.currentThread().isInterrupted()) {
-            
+            socket.recv();
         }
     }
 }
