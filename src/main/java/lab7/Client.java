@@ -17,6 +17,7 @@ public class Client {
             socket.connect(CLIENT_ADDRESS);
         } finally {
             context.destroySocket(socket);
+            context.destroy();
         }
     }
 }
