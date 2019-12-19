@@ -20,7 +20,7 @@ public class Client {
             socket.connect(CLIENT_ADDRESS);
 
             while (true) {
-                   
+                String cmd = in.nextLine();
             }
         } finally {
             context.destroySocket(socket);
