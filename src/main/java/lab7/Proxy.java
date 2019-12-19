@@ -25,6 +25,7 @@ public class Proxy {
     private static void removeDeadStorages() {
         storages.forEach((s, storageInfo) -> {
             if (storageInfo.isDead()) {
+                System.out.println("Удалено мертвое хранилище");
                 storages.remove(s);
             }
         });
