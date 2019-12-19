@@ -17,6 +17,8 @@ public class Storage {
         socket.send(CommandService.makeConnectCommand(start, end), 0);
     }
 
+    
+
     public static void main(String[] args) {
         //TODO: try..catch
         Map<Integer, Integer> storage = new HashMap<>();
@@ -41,7 +43,7 @@ public class Storage {
                 System.out.println("NOTIFY");
 
                 heartbeatTime = System.currentTimeMillis() + HEARTBEAT_TIMEOUT;
-                socket
+                //
             }
         }
     }
