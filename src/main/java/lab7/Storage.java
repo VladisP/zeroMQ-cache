@@ -40,7 +40,7 @@ public class Storage {
             if (System.currentTimeMillis() >= heartbeatTime) {
                 System.out.println("NOTIFY");
 
-                heartbeatTime = 
+                heartbeatTime = System.currentTimeMillis() + HEARTBEAT_TIMEOUT;
             }
         }
     }
