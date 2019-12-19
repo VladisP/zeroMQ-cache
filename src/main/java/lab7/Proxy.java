@@ -42,7 +42,11 @@ public class Proxy {
                 //System.out.println("LEN: " + msg.size());
                 //System.out.println(id + "|" + msg.toString());
                 String cmd = new String(msg.getFirst().getData(), ZMQ.CHARSET);
-                if () 
+                
+
+                if () {
+
+                }
             }
         }
 
