@@ -45,9 +45,9 @@ public class CommandService {
         return "NOTIFY";
     }
 
-    public Pair<Integer, Integer> parseConnectCommand(String cmd) {
+    public static Pair<String, String> parseConnectCommand(String cmd) {
         String[] cmdParts = cmd.split(" ");
 
-        return new Pair<Integer, Integer>(cmdParts[1], cmdParts[2]);
+        return new Pair<>(cmdParts[1], cmdParts[2]);
     }
 }
