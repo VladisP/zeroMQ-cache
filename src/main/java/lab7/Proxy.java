@@ -17,5 +17,8 @@ public class Proxy {
         //TODO: try..catch
         ZContext context = new ZContext();
         frontend = context.createSocket(SocketType.ROUTER);
+        backend = context.createSocket(SocketType.ROUTER);
+
+        
     }
 }
