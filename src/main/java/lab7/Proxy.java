@@ -27,7 +27,7 @@ public class Proxy {
             @Override
             public void accept(String s, StorageInfo storageInfo) {
                 if (storageInfo.isDead()) {
-                    
+                    storages.remove(s);
                 }
             }
         });
