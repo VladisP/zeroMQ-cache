@@ -6,6 +6,8 @@ import org.zeromq.ZMQ;
 
 import java.util.Scanner;
 
+import static lab7.CommandService.*;
+
 public class Client {
 
     private final static String CLIENT_ADDRESS = "tcp://localhost:5555";
@@ -21,6 +23,9 @@ public class Client {
 
             while (true) {
                 String cmd = in.nextLine();
+                CommandType cmdType = CommandService.getCommandType(cmd);
+
+                
             }
         } finally {
             context.destroySocket(socket);
