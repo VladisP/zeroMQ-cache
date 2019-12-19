@@ -29,7 +29,7 @@ public class Proxy {
 
             if (items.pollin(0)) {
                 //TODO: пока ничего
-                System.out.println();
+                System.out.println(frontend.recvStr());
             }
 
             if (items.pollin(1)) {
