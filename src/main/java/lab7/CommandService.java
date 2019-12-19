@@ -9,5 +9,7 @@ public class CommandService {
         INVALID
     }
 
-    public 
+    public static CommandType getCommandType(String cmd) {
+        
+    }
 }
