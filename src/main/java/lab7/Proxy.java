@@ -32,6 +32,10 @@ public class Proxy {
             if (items.pollin(0)) {
                 //TODO: пока ничего
             }
+
+            if () {
+
+            }
         }
     }
 }
