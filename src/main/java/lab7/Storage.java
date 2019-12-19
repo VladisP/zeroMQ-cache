@@ -38,7 +38,7 @@ public class Storage {
             System.out.println(cmd); //TODO: upd that later...
 
             if (System.currentTimeMillis() >= heartbeatTime) {
-
+                System.out.println("NOTIFY");
             }
         }
     }
