@@ -27,7 +27,9 @@ public class Proxy {
         items.register(backend, ZMQ.Poller.POLLIN);
 
         while (!Thread.currentThread().isInterrupted()) {
-            
+            if () {
+                
+            }
         }
     }
 }
