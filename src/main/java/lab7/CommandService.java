@@ -17,8 +17,8 @@ public class CommandService {
     }
 
     public static CommandType getCommandType(String cmd) {
-        if (SET_COMMAND_PATTERN.matcher()) {
-
+        if (SET_COMMAND_PATTERN.matcher(cmd).find()) {
+            return
         }
     }
 }
