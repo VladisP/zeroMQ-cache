@@ -6,7 +6,7 @@ import org.zeromq.ZMQ;
 
 public class Storage {
 
-    public final static String 
+    public final static String STORAGE_ADDRESS = ""
 
     public static void main(String[] args) {
         ZContext context = new ZContext();
