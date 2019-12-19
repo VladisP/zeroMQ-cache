@@ -20,9 +20,8 @@ public class Client {
             socket.connect(CLIENT_ADDRESS);
 
             while (true) {
-                
+                   
             }
-
         } finally {
             context.destroySocket(socket);
             context.destroy();
