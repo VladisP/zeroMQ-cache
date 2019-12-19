@@ -1,5 +1,7 @@
 package lab7;
 
+import java.util.regex.Pattern;
+
 public class CommandService {
 
     public static enum CommandType {
@@ -10,6 +12,6 @@ public class CommandService {
     }
 
     public static CommandType getCommandType(String cmd) {
-        
+        Pattern 
     }
 }
