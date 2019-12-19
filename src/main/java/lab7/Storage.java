@@ -13,11 +13,16 @@ public class Storage {
     }
 
     public static void main(String[] args) {
+        //TODO: try..catch
         ZContext context = new ZContext();
         ZMQ.Socket socket = context.createSocket(SocketType.DEALER);
         socket.connect(STORAGE_ADDRESS);
 
         int startCell = Integer.parseInt(args[0]);
         int endCell = Integer.parseInt(args[1]);
+
+        System.out.println("Хранилище настроено");
+
+        
     }
 }
