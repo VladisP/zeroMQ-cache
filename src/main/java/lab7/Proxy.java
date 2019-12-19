@@ -33,7 +33,7 @@ public class Proxy {
                 //TODO: пока ничего
             }
 
-            if () {
+            if (items.pollin(1)) {
 
             }
         }
