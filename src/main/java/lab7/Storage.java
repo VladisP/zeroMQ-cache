@@ -14,7 +14,7 @@ public class Storage {
 
     public static void main(String[] args) {
         //TODO: try..catch
-        Map<Str>
+        Map<Integer, Integer> 
 
         ZContext context = new ZContext();
         ZMQ.Socket socket = context.createSocket(SocketType.DEALER);
