@@ -30,7 +30,7 @@ public class Proxy {
             items.poll();
 
             if (items.pollin(0)) {
-                
+                //TODO: пока ничего
             }
         }
     }
