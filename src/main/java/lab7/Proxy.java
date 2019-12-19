@@ -72,6 +72,8 @@ public class Proxy {
                     updateHeartbeatTime(id);
                 }
             }
+
+            removeDeadStorages();
         }
 
         context.destroySocket(frontend);
