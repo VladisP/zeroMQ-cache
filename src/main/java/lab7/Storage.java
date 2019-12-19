@@ -6,6 +6,8 @@ import org.zeromq.ZMQ;
 
 public class Storage {
 
+    public final static String 
+
     public static void main(String[] args) {
         ZContext context = new ZContext();
         ZMQ.Socket socket = context.createSocket(SocketType.DEALER);
