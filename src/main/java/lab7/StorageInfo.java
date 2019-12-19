@@ -8,7 +8,7 @@ public class StorageInfo {
     private int end;
     private long heartbeatTime;
 
-    public StorageInfo() {
+    public StorageInfo(ZFrame address, ) {
 
     }
 }
