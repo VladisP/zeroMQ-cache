@@ -25,6 +25,7 @@ public class Storage {
 
         System.out.println("Хранилище настроено");
 
-        ZMQ.Poller
+        ZMQ.Poller poller;
+        
     }
 }
