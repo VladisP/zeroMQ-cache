@@ -6,7 +6,7 @@ import org.zeromq.ZMQ;
 
 public class Client {
 
-    private final static 
+    private final static String CLIENT_ADDRESS
 
     public static void main(String[] args) {
         ZContext context = new ZContext();
