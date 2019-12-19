@@ -1,5 +1,6 @@
 package lab7;
 
+import javafx.util.Pair;
 import org.zeromq.*;
 
 import java.util.ArrayList;
@@ -47,7 +48,7 @@ public class Proxy {
                 CommandType cmdType = CommandService.getCommandType(cmd);
 
                 if (cmdType == CommandType.CONNECT) {
-
+                    Pair<Integer, Integer> 
                 }
             }
         }
