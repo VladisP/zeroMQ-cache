@@ -10,7 +10,7 @@ import static lab7.CommandService.*;
 
 public class Client {
 
-    private final static String CLIENT_ADDRESS = "tcp://localhost:5555";
+    public final static String CLIENT_ADDRESS = "tcp://localhost:5555";
 
     private static void printHelpMessage() {
         System.out.println("Неверная команда, доступны только следующие команды:");

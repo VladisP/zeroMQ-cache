@@ -19,6 +19,6 @@ public class Proxy {
         frontend = context.createSocket(SocketType.ROUTER);
         backend = context.createSocket(SocketType.ROUTER);
 
-        
+        frontend.bind(Client.CLIENT_ADDRESS);
     }
 }
