@@ -37,7 +37,7 @@ public class Storage {
             String cmd = socket.recvStr(0);
             System.out.println(cmd); //TODO: upd that later...
 
-            if () {
+            if (System.currentTimeMillis() > ) {
 
             }
         }
