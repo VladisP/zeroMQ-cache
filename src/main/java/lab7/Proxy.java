@@ -12,6 +12,7 @@ public class Proxy {
     private static ZMQ.Socket backend;
 
     public static void main(String[] args) {
-
+        //TODO: try..catch
+        
     }
 }
