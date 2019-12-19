@@ -39,8 +39,9 @@ public class Proxy {
                 ZFrame address = msg.unwrap();
                 String id = new String(address.getData(), ZMQ.CHARSET);
 
-                System.out.println("LEN: " + msg.size());
-                System.out.println(id + "|" + msg.toString());
+                //System.out.println("LEN: " + msg.size());
+                //System.out.println(id + "|" + msg.toString());
+                
             }
         }
 
