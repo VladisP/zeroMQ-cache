@@ -17,7 +17,9 @@ public class Storage {
         socket.send(CommandService.makeConnectCommand(start, end), 0);
     }
 
-    
+    private static void sendNotifyCommand() {
+
+    }
 
     public static void main(String[] args) {
         //TODO: try..catch
