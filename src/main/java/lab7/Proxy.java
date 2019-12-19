@@ -26,7 +26,9 @@ public class Proxy {
         storages.forEach(new BiConsumer<String, StorageInfo>() {
             @Override
             public void accept(String s, StorageInfo storageInfo) {
-                
+                if (storageInfo.isDead()) {
+                    
+                }
             }
         });
     }
