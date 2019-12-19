@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.function.BiConsumer;
 
 import static lab7.CommandService.*;
 
@@ -22,9 +23,12 @@ public class Proxy {
     }
 
     private static void removeDeadStorages() {
-        for (StorageInfo info) {
-
-        }
+        storages.forEach(new BiConsumer<String, StorageInfo>() {
+            @Override
+            public void accept(String s, StorageInfo storageInfo) {
+                
+            }
+        });
     }
 
     public static void main(String[] args) {
