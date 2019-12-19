@@ -1,5 +1,6 @@
 package lab7;
 
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class CommandService {
@@ -16,6 +17,6 @@ public class CommandService {
     }
 
     public static CommandType getCommandType(String cmd) {
-        
+        Matcher matcher = 
     }
 }
