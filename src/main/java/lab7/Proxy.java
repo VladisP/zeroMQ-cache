@@ -29,6 +29,7 @@ public class Proxy {
 
             if (items.pollin(0)) {
                 //TODO: пока ничего
+                System.out.println();
             }
 
             if (items.pollin(1)) {
@@ -36,7 +37,7 @@ public class Proxy {
                 ZFrame address = msg.unwrap();
                 String id = new String(address.getData(), ZMQ.CHARSET);
 
-                
+
             }
         }
     }
