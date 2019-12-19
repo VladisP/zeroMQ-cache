@@ -21,6 +21,10 @@ public class Proxy {
         storages.get(id).setHeartbeatTime(System.currentTimeMillis());
     }
 
+    private static void removeDeadStorages() {
+        
+    }
+
     public static void main(String[] args) {
         //TODO: try..catch
         ZContext context = new ZContext();
