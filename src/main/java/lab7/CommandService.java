@@ -12,6 +12,6 @@ public class CommandService {
     }
 
     public static CommandType getCommandType(String cmd) {
-        Pattern pattern = Pattern.compile("SET \d");
+        Pattern pattern = Pattern.compile("SET \\d+ \\d+");
     }
 }
