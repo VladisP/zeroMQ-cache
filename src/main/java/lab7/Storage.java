@@ -14,6 +14,8 @@ public class Storage {
 
     public static void main(String[] args) {
         //TODO: try..catch
+        Map<Str>
+
         ZContext context = new ZContext();
         ZMQ.Socket socket = context.createSocket(SocketType.DEALER);
         socket.connect(STORAGE_ADDRESS);
@@ -25,6 +27,6 @@ public class Storage {
 
         System.out.println("Хранилище настроено");
 
-        
+
     }
 }
