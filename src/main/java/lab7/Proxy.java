@@ -37,7 +37,7 @@ public class Proxy {
                 ZFrame address = msg.unwrap();
                 String id = new String(address.getData(), ZMQ.CHARSET);
 
-
+                
             }
         }
     }
