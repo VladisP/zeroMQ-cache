@@ -26,7 +26,7 @@ public class Storage {
         int startCell = Integer.parseInt(args[0]);
         int endCell = Integer.parseInt(args[1]);
 
-        long  System.currentTimeMillis()
+        long heartbeat System.currentTimeMillis()
         sendConnectCommand(socket, startCell, endCell);
 
         System.out.println("Хранилище настроено");
