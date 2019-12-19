@@ -23,12 +23,9 @@ public class Proxy {
     }
 
     private static void removeDeadStorages() {
-        storages.forEach(new BiConsumer<String, StorageInfo>() {
-            @Override
-            public void accept(String s, StorageInfo storageInfo) {
-                if (storageInfo.isDead()) {
-                    storages.remove(s);
-                }
+        storages.forEach((s, storageInfo) -> {
+            if (storageInfo.isDead()) {
+                storages.remove(s);
             }
         });
     }
