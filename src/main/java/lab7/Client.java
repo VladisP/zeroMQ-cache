@@ -47,7 +47,7 @@ public class Client {
                 socket.send(cmd, 0);
 //                String reply = socket.recvStr(0);
                 ZMsg msg = ZMsg.recvMsg(socket);
-                System.out.println(msg.getFirst().getData(), ZMQ.CHARSET);
+                System.out.println(new String(msg.getFirst().getData(), ZMQ.CHARSET));
             }
         } finally {
             context.destroySocket(socket);
