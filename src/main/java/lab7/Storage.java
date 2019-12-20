@@ -3,6 +3,7 @@ package lab7;
 import org.zeromq.SocketType;
 import org.zeromq.ZContext;
 import org.zeromq.ZMQ;
+import org.zeromq.ZMsg;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -40,7 +41,7 @@ public class Storage {
 
         while (!Thread.currentThread().isInterrupted()) {
 //            String cmd = socket.recvStr(ZMQ.DONTWAIT);
-            
+            ZMsg msg = 
 
             if (cmd != null) {
                 CommandType cmdType = CommandService.getCommandType(cmd);
