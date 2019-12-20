@@ -39,7 +39,8 @@ public class Storage {
         System.out.println("Хранилище настроено");
 
         while (!Thread.currentThread().isInterrupted()) {
-            String cmd = socket.recvStr(ZMQ.DONTWAIT);
+//            String cmd = socket.recvStr(ZMQ.DONTWAIT);
+            
 
             if (cmd != null) {
                 CommandType cmdType = CommandService.getCommandType(cmd);
@@ -47,7 +48,7 @@ public class Storage {
                 if (cmdType == CommandType.GET) {
                     System.out.println(cmd);
 
-                    
+
                 }
             }
 
