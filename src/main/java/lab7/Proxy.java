@@ -104,9 +104,7 @@ public class Proxy {
                 ZMsg msg = ZMsg.recvMsg(backend);
                 ZFrame address = msg.unwrap();
                 String id = new String(address.getData(), ZMQ.CHARSET);
-
-                //System.out.println("LEN: " + msg.size());
-                //System.out.println(id + "|" + msg.toString());
+                
                 String cmd = new String(msg.getFirst().getData(), ZMQ.CHARSET);
                 CommandType cmdType = CommandService.getCommandType(cmd);
 
