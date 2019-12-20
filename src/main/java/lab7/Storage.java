@@ -59,7 +59,8 @@ public class Storage {
 
                 if (cmdType == CommandType.SET) {
                     Pair<Integer, Integer> setParams = CommandService.parseKeyValueCommand(cmd);
-                    
+
+                    storage.put(setParams.getKey(), setParams.getValue());
                 }
             }
 
