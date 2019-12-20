@@ -122,6 +122,8 @@ public class Proxy {
                     System.out.println("Обновление времени хартбита");
 
                     updateHeartbeatTime(id);
+                } else if (cmdType == CommandType.RESPONSE) {
+                    
                 }
             }
 
