@@ -89,7 +89,12 @@ public class Proxy {
                     Integer key = CommandService.getKey(cmd);
                     boolean isKeyValid = sendSetRequest(key, msg);
 
-                    
+                    String response = isKeyValid ?
+                            CommandService.makeResponse("значение записано") :
+                            CommandService.makeResponse("указанная ячейка вне диапазона кеша");
+
+                    msg.getLast().reset(response);
+                    msg.send(frontend);
                 }
             }
 
