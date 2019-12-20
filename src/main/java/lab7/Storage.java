@@ -44,7 +44,7 @@ public class Storage {
             ZMsg msg = ZMsg.recvMsg(socket, false);
 
             if (msg != null) {
-                
+                String cmd = 
                 CommandType cmdType = CommandService.getCommandType(cmd);
 
                 if (cmdType == CommandType.GET) {
