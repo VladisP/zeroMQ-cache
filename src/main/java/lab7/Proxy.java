@@ -44,6 +44,8 @@ public class Proxy {
         items.register(frontend, ZMQ.Poller.POLLIN);
         items.register(backend, ZMQ.Poller.POLLIN);
 
+        System.out.println("Сервер начал работу");
+
         while (!Thread.currentThread().isInterrupted()) {
             items.poll();
 
