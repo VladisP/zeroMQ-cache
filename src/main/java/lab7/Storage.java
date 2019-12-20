@@ -45,6 +45,8 @@ public class Storage {
                 CommandType cmdType = CommandService.getCommandType(cmd);
 
                 if (cmdType == CommandType.GET) {
+                    System.out.println(cmd);
+
                     
                 }
             }
