@@ -41,7 +41,7 @@ public class Client {
                     continue;
                 }
 
-                ZFrame frame = new ZFrame()
+                ZFrame frame = new ZFrame(cmd);
                 socket.send(cmd, 0);
 //                String reply = socket.recvStr(0);
                 ZMsg msg = ZMsg.recvMsg(socket);
