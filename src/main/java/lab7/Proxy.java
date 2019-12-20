@@ -31,6 +31,7 @@ public class Proxy {
             public void accept(String s, StorageInfo storageInfo) {
                 if (storageInfo.getStart() <= key && key <= storageInfo.getEnd()) {
                     storageInfo.getAddress().send(backend, ZFrame.REUSE + ZFrame.MORE);
+                    msg.send(backend);
                 }
             }
         });
