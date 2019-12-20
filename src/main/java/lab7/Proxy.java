@@ -23,7 +23,7 @@ public class Proxy {
     }
 
     private static void removeDeadStorages() {
-        storages.entrySet().iterator();
+         storages.entrySet().iterator();
 
         storages.forEach((s, storageInfo) -> {
             if (storageInfo.isDead()) {
