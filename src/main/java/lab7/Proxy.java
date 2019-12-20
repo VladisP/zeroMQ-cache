@@ -96,8 +96,7 @@ public class Proxy {
                     ZMsg responseMsg = new ZMsg();
                     responseMsg.add(new ZFrame(response));
                     responseMsg.wrap(msg.getFirst());
-                    msg.getLast().reset(response);
-                    msg.send(frontend);
+                    responseMsg.send(frontend);
                 }
             }
 
