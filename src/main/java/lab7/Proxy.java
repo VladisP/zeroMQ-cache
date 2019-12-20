@@ -4,7 +4,6 @@ import javafx.util.Pair;
 import org.zeromq.*;
 
 import java.util.*;
-import java.util.function.BiConsumer;
 
 import static lab7.CommandService.*;
 
@@ -62,7 +61,7 @@ public class Proxy {
                 if (cmdType == CommandType.CONNECT) {
                     System.out.println("Хранилище зарегистрировано");
 
-                    Pair<Integer, Integer> range = CommandService.parseConnectCommand(cmd);
+                    Pair<Integer, Integer> range = CommandService.parseKeyValueCommand(cmd);
 
                     storages.put(id, new StorageInfo(
                             address, range.getKey(), range.getValue(), System.currentTimeMillis()

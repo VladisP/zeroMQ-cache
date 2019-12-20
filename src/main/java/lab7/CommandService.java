@@ -50,7 +50,7 @@ public class CommandService {
         return cmd.split(DELIMITER);
     }
 
-    public static Pair<Integer, Integer> parseConnectCommand(String cmd) {
+    public static Pair<Integer, Integer> parseKeyValueCommand(String cmd) {
         String[] cmdParts = splitCmd(cmd);
 
         return new Pair<>(Integer.parseInt(cmdParts[1]), Integer.parseInt(cmdParts[2]));

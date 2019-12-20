@@ -1,5 +1,6 @@
 package lab7;
 
+import javafx.util.Pair;
 import org.zeromq.SocketType;
 import org.zeromq.ZContext;
 import org.zeromq.ZMQ;
@@ -47,15 +48,17 @@ public class Storage {
                 String cmd = new String(msg.getLast().getData(), ZMQ.CHARSET);
                 CommandType cmdType = CommandService.getCommandType(cmd);
 
-                if (cmdType == CommandType.GET) {
-                    System.out.println(cmd);
+                System.out.println(cmd);
 
+                if (cmdType == CommandType.GET) {
                     Integer key = CommandService.parseGetCommand(cmd);
+
                     msg.getLast().reset(Integer.toString(storage.get(key)));
                     msg.send(socket);
                 }
 
                 if (cmdType == CommandType.SET) {
+                    Pair<Integer, Integer> setParams = CommandService.parseKeyValueCommand(cmd);
                     
                 }
             }
