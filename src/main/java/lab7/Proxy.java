@@ -69,6 +69,10 @@ public class Proxy {
                         msg.send(frontend);
                     }
                 }
+
+                if (cmdType == CommandType.SET) {
+                    
+                }
             }
 
             if (items.pollin(1)) {
