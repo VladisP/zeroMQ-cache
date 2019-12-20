@@ -37,7 +37,17 @@ public class Proxy {
     }
 
     private static boolean sendSetRequest(Integer key, ZMsg msg) {
-        
+        boolean isKeyValid = false;
+
+        for (Map.Entry<String, StorageInfo> entry : storages.entrySet()) {
+            StorageInfo storageInfo = entry.getValue();
+
+            if (storageInfo.getStart() <= key && key <= storageInfo.getEnd()) {
+                storageInfo.getAddress().send(backend, ZFrame.REUSE + ZFrame.MORE);
+                msg.send(backend);
+                return true;
+            }
+        }
     }
 
     public static void main(String[] args) {
