@@ -47,6 +47,7 @@ public class Proxy {
         System.out.println("Сервер начал работу");
 
         while (!Thread.currentThread().isInterrupted()) {
+            System.out.println("iter");
             items.poll();
 
             if (items.pollin(0)) {
