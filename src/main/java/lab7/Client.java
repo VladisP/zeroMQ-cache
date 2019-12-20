@@ -1,9 +1,6 @@
 package lab7;
 
-import org.zeromq.SocketType;
-import org.zeromq.ZContext;
-import org.zeromq.ZMQ;
-import org.zeromq.ZMsg;
+import org.zeromq.*;
 
 import java.util.Scanner;
 
@@ -44,6 +41,7 @@ public class Client {
                     continue;
                 }
 
+                ZFrame 
                 socket.send(cmd, 0);
 //                String reply = socket.recvStr(0);
                 ZMsg msg = ZMsg.recvMsg(socket);
