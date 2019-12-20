@@ -38,7 +38,6 @@ public class Proxy {
         System.out.println("Сервер начал работу");
 
         while (!Thread.currentThread().isInterrupted()) {
-            System.out.println("iter");
             items.poll(Storage.HEARTBEAT_TIMEOUT);
 
             if (items.pollin(0)) {
