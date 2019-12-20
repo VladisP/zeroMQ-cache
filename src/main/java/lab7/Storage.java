@@ -52,6 +52,7 @@ public class Storage {
 
                     Integer key = CommandService.parseGetCommand(cmd);
                     msg.getLast().reset(Integer.toString(storage.get(key)));
+                    msg.send(socket);
                 }
             }
 
