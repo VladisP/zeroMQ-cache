@@ -20,15 +20,7 @@ public class Proxy {
     }
 
     private static void removeDeadStorages() {
-
-        storages.entrySet().removeIf(stringStorageInfoEntry -> stringStorageInfoEntry.getValue().isDead());
-
-        storages.forEach((s, storageInfo) -> {
-            if (storageInfo.isDead()) {
-                System.out.println("Удалено мертвое хранилище");
-                storages.remove(s);
-            }
-        });
+        storages.entrySet().removeIf(entry -> entry.getValue().isDead());
     }
 
     public static void main(String[] args) {
@@ -83,6 +75,7 @@ public class Proxy {
             }
 
             removeDeadStorages();
+            System.out.println("Количество живых хранилищ: " + storages.size());
         }
 
         context.destroySocket(frontend);
