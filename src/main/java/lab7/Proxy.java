@@ -4,6 +4,7 @@ import javafx.util.Pair;
 import org.zeromq.*;
 
 import java.util.*;
+import java.util.function.BiConsumer;
 
 import static lab7.CommandService.*;
 
@@ -48,7 +49,12 @@ public class Proxy {
                 if (cmdType == CommandType.GET) {
                     Integer key = CommandService.parseGetCommand(cmd);
 
-                    storages.entrySet().iterator()
+                    storages.forEach(new BiConsumer<String, StorageInfo>() {
+                        @Override
+                        public void accept(String s, StorageInfo storageInfo) {
+                            
+                        }
+                    });
                 }
             }
 
