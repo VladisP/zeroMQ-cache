@@ -24,19 +24,17 @@ public class Proxy {
     }
 
     private static boolean sendGetRequest(Integer key, ZMsg msg) {
-        boolean isKeyValid = false;
+        for (Map.Entry<String, StorageInfo> entry : storages.entrySet()) {
+            StorageInfo storageInfo = entry.getValue();
 
-        storages.forEach(new BiConsumer<String, StorageInfo>() {
-            @Override
-            public void accept(String s, StorageInfo storageInfo) {
-                if (storageInfo.getStart() <= key && key <= storageInfo.getEnd()) {
-                    storageInfo.getAddress().send(backend, ZFrame.REUSE + ZFrame.MORE);
-                    msg.send(backend);
-                }
+            if (storageInfo.getStart() <= key && key <= storageInfo.getEnd()) {
+                storageInfo.getAddress().send(backend, ZFrame.REUSE + ZFrame.MORE);
+                msg.send(backend);
+                return true;
             }
-        });
+        }
 
-        return isKeyValid;
+        return false;
     }
 
     public static void main(String[] args) {
