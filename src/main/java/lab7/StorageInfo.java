@@ -17,6 +17,18 @@ public class StorageInfo {
         this.heartbeatTime = heartbeatTime;
     }
 
+    public ZFrame getAddress() {
+        return address;
+    }
+
+    public int getStart() {
+        return start;
+    }
+
+    public int getEnd() {
+        return end;
+    }
+
     public void setHeartbeatTime(long heartbeatTime) {
         this.heartbeatTime = heartbeatTime;
     }

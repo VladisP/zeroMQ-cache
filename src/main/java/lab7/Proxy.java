@@ -23,8 +23,19 @@ public class Proxy {
         storages.entrySet().removeIf(entry -> entry.getValue().isDead());
     }
 
-    private static boolean sendGetRequest(Integer key) {
+    private static boolean sendGetRequest(Integer key, ZMsg msg) {
+        boolean isKeyValid = false;
 
+        storages.forEach(new BiConsumer<String, StorageInfo>() {
+            @Override
+            public void accept(String s, StorageInfo storageInfo) {
+                if (storageInfo.getStart()) {
+
+                }
+            }
+        });
+
+        return isKeyValid;
     }
 
     public static void main(String[] args) {
@@ -52,13 +63,11 @@ public class Proxy {
 
                 if (cmdType == CommandType.GET) {
                     Integer key = CommandService.parseGetCommand(cmd);
+                    boolean isKeyValid = sendGetRequest(key, msg);
 
-                    storages.forEach(new BiConsumer<String, StorageInfo>() {
-                        @Override
-                        public void accept(String s, StorageInfo storageInfo) {
-
-                        }
-                    });
+                    if (!isKeyValid) {
+                        //TODO: ругаемся
+                    }
                 }
             }
 
