@@ -3,18 +3,14 @@ package lab7;
 import javafx.util.Pair;
 import org.zeromq.*;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.function.BiConsumer;
 
-import static lab7.CommandService.*;
+import static lab7.CommandService.CommandType;
 
 public class Proxy {
 
     //private static final List<StorageInfo> storages = new ArrayList<>();
-    private static final Map<String, StorageInfo> storages = new HashMap<>();
+    private static final HashMap<String, StorageInfo> storages = new HashMap<>();
     private static ZMQ.Socket frontend;
     private static ZMQ.Socket backend;
 
@@ -23,6 +19,8 @@ public class Proxy {
     }
 
     private static void removeDeadStorages() {
+        storages.
+
         storages.forEach((s, storageInfo) -> {
             if (storageInfo.isDead()) {
                 System.out.println("Удалено мертвое хранилище");
