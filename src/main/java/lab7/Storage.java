@@ -7,17 +7,19 @@ import org.zeromq.ZMQ;
 import java.util.HashMap;
 import java.util.Map;
 
+import static lab7.CommandService.*;
+
 public class Storage {
 
     public static final int HEARTBEAT_TIMEOUT = 3000;
     public static final String STORAGE_ADDRESS = "tcp://localhost:5556";
 
     private static void sendConnectCommand(ZMQ.Socket socket, int start, int end) {
-        socket.send(CommandService.makeConnectCommand(start, end), 0);
+        socket.send(makeConnectCommand(start, end), 0);
     }
 
     private static void sendNotifyCommand(ZMQ.Socket socket) {
-        socket.send(CommandService.makeNotifyCommand(), 0);
+        socket.send(makeNotifyCommand(), 0);
     }
 
     public static void main(String[] args) {
@@ -38,7 +40,14 @@ public class Storage {
 
         while (!Thread.currentThread().isInterrupted()) {
             String cmd = socket.recvStr(ZMQ.DONTWAIT);
-            System.out.println(cmd); //TODO: upd that later...
+
+            if (cmd != null) {
+                CommandType cmdType = CommandService.getCommandType(cmd);
+
+                if (cmdType == CommandType.GET) {
+                    
+                }
+            }
 
             if (System.currentTimeMillis() >= heartbeatTime) {
                 System.out.println("NOTIFY");
