@@ -51,7 +51,7 @@ public class Storage {
                     System.out.println(cmd);
 
                     Integer key = CommandService.parseGetCommand(cmd);
-                    msg.getLast().reset(storage.get(key));
+                    msg.getLast().reset(Integer.toString(storage.get(key)));
                 }
             }
 
