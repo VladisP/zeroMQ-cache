@@ -10,7 +10,8 @@ public class CommandService {
     private static final Pattern GET_COMMAND_PATTERN = Pattern.compile("^GET \\d+$", Pattern.CASE_INSENSITIVE);
     private static final Pattern EXIT_COMMAND_PATTERN = Pattern.compile("^F$", Pattern.CASE_INSENSITIVE);
     private static final Pattern CONNECT_COMMAND_PATTERN = Pattern.compile("^CONNECT \\d+ \\d+$", Pattern.CASE_INSENSITIVE);
-    private static final Pattern NOTIFY_COMMAND_PATTERN = Pattern.compile("^NOTIFY$");
+    private static final Pattern NOTIFY_COMMAND_PATTERN = Pattern.compile("^NOTIFY$", Pattern.CASE_INSENSITIVE);
+    private static final Pattern RESPONSE_COMMAND_PATTERN = Pattern.compile("^RESPONSE: [a-zа-я\\s\\d]+$", Pattern.CASE_INSENSITIVE);
     private static final String DELIMITER = " ";
 
     public enum CommandType {
@@ -19,6 +20,7 @@ public class CommandService {
         EXIT,
         CONNECT,
         NOTIFY,
+        RESPONSE,
         INVALID
     }
 
@@ -33,6 +35,8 @@ public class CommandService {
             return CommandType.CONNECT;
         } else if (NOTIFY_COMMAND_PATTERN.matcher(cmd).find()) {
             return CommandType.NOTIFY;
+        } else if (RESPONSE_COMMAND_PATTERN.matcher(cmd).find()) {
+            return CommandType.RESPONSE;
         } else {
             return CommandType.INVALID;
         }
@@ -44,6 +48,10 @@ public class CommandService {
 
     public static String makeNotifyCommand() {
         return "NOTIFY";
+    }
+
+    public static String makeResponseCommand(String response) {
+        return "RESPONSE: " + response;
     }
 
     private static String[] splitCmd(String cmd) {
@@ -60,9 +68,5 @@ public class CommandService {
         String[] cmdParts = splitCmd(cmd);
 
         return Integer.parseInt(cmdParts[1]);
-    }
-
-    public static String makeResponse(String response) {
-        return "RESPONSE: " + response;
     }
 }

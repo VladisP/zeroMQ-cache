@@ -80,7 +80,7 @@ public class Proxy {
                     boolean isKeyValid = sendGetRequest(key, msg);
 
                     if (!isKeyValid) {
-                        msg.getLast().reset(CommandService.makeResponse("указанная ячейка вне диапазона кеша"));
+                        msg.getLast().reset(CommandService.makeResponseCommand("указанная ячейка вне диапазона кеша"));
                         msg.send(frontend);
                     }
                 }
@@ -90,8 +90,8 @@ public class Proxy {
                     boolean isKeyValid = sendSetRequest(key, msg);
 
                     String response = isKeyValid ?
-                            CommandService.makeResponse("значение записано") :
-                            CommandService.makeResponse("указанная ячейка вне диапазона кеша");
+                            CommandService.makeResponseCommand("значение записано") :
+                            CommandService.makeResponseCommand("указанная ячейка вне диапазона кеша");
 
                     ZMsg responseMsg = new ZMsg();
                     responseMsg.add(new ZFrame(response));
@@ -104,7 +104,7 @@ public class Proxy {
                 ZMsg msg = ZMsg.recvMsg(backend);
                 ZFrame address = msg.unwrap();
                 String id = new String(address.getData(), ZMQ.CHARSET);
-                
+
                 String cmd = new String(msg.getFirst().getData(), ZMQ.CHARSET);
                 CommandType cmdType = CommandService.getCommandType(cmd);
 
