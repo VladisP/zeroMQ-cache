@@ -65,7 +65,8 @@ public class Proxy {
                     boolean isKeyValid = sendGetRequest(key, msg);
 
                     if (!isKeyValid) {
-                        CommandService.makeResponse()
+                        msg.getLast().reset(CommandService.makeResponse("указанная ячейка вне диапазона кеша"));
+                        msg.send(frontend);
                     }
                 }
             }
