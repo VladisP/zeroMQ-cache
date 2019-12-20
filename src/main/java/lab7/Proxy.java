@@ -105,7 +105,9 @@ public class Proxy {
                 ZFrame address = msg.unwrap();
                 String id = new String(address.getData(), ZMQ.CHARSET);
 
-                String cmd = new String(msg.getFirst().getData(), ZMQ.CHARSET);
+                //TODO: be careful!!!
+//                String cmd = new String(msg.getFirst().getData(), ZMQ.CHARSET);
+                String cmd = new String(msg.getLast().getData(), ZMQ.CHARSET);
                 CommandType cmdType = CommandService.getCommandType(cmd);
 
                 if (cmdType == CommandType.CONNECT) {
