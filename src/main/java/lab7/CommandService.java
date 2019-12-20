@@ -6,11 +6,12 @@ import java.util.regex.Pattern;
 
 public class CommandService {
 
-    private static Pattern SET_COMMAND_PATTERN = Pattern.compile("^SET \\d+ \\d+$", Pattern.CASE_INSENSITIVE);
-    private static Pattern GET_COMMAND_PATTERN = Pattern.compile("^GET \\d+$", Pattern.CASE_INSENSITIVE);
-    private static Pattern EXIT_COMMAND_PATTERN = Pattern.compile("^F$", Pattern.CASE_INSENSITIVE);
-    private static Pattern CONNECT_COMMAND_PATTERN = Pattern.compile("^CONNECT \\d+ \\d+$", Pattern.CASE_INSENSITIVE);
-    private static Pattern NOTIFY_COMMAND_PATTERN = Pattern.compile("^NOTIFY$");
+    private static final Pattern SET_COMMAND_PATTERN = Pattern.compile("^SET \\d+ \\d+$", Pattern.CASE_INSENSITIVE);
+    private static final Pattern GET_COMMAND_PATTERN = Pattern.compile("^GET \\d+$", Pattern.CASE_INSENSITIVE);
+    private static final Pattern EXIT_COMMAND_PATTERN = Pattern.compile("^F$", Pattern.CASE_INSENSITIVE);
+    private static final Pattern CONNECT_COMMAND_PATTERN = Pattern.compile("^CONNECT \\d+ \\d+$", Pattern.CASE_INSENSITIVE);
+    private static final Pattern NOTIFY_COMMAND_PATTERN = Pattern.compile("^NOTIFY$");
+    private static final String DELIMETER
 
     public enum CommandType {
         GET,
@@ -45,9 +46,17 @@ public class CommandService {
         return "NOTIFY";
     }
 
+    private static String[] splitCmd(String cmd) {
+        return cmd.split(" ");
+    }
+
     public static Pair<Integer, Integer> parseConnectCommand(String cmd) {
-        String[] cmdParts = cmd.split(" ");
+        String[] cmdParts = splitCmd(cmd);
 
         return new Pair<>(Integer.parseInt(cmdParts[1]), Integer.parseInt(cmdParts[2]));
+    }
+
+    public static Integer parseGetCommand(String cmd) {
+        String[] cmdParts = cmd.split(" ");
     }
 }
