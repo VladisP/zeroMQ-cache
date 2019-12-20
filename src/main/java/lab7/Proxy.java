@@ -123,7 +123,7 @@ public class Proxy {
 
                     updateHeartbeatTime(id);
                 } else if (cmdType == CommandType.RESPONSE) {
-                    
+                    msg.send(frontend);
                 }
             }
 
