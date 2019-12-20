@@ -70,6 +70,7 @@ public class Proxy {
                 }
 
                 if (cmdType == CommandType.SET) {
+                    Integer key = CommandService.getKey(cmd);
                     
                 }
             }
