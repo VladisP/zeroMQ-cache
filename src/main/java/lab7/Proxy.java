@@ -93,6 +93,7 @@ public class Proxy {
                             CommandService.makeResponse("значение записано") :
                             CommandService.makeResponse("указанная ячейка вне диапазона кеша");
 
+                    
                     msg.getLast().reset(response);
                     msg.send(frontend);
                 }
