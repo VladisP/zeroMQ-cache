@@ -68,7 +68,7 @@ public class Storage {
             }
 
             if (System.currentTimeMillis() >= heartbeatTime) {
-                System.out.println("NOTIFY");
+//                System.out.println("NOTIFY");
 
                 heartbeatTime = System.currentTimeMillis() + HEARTBEAT_TIMEOUT;
                 sendNotifyCommand(socket);

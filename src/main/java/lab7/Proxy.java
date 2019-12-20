@@ -119,7 +119,7 @@ public class Proxy {
                             address, range.getKey(), range.getValue(), System.currentTimeMillis()
                     ));
                 } else if (cmdType == CommandType.NOTIFY) {
-                    System.out.println("Обновление времени хартбита");
+//                    System.out.println("Обновление времени хартбита");
 
                     updateHeartbeatTime(id);
                 } else if (cmdType == CommandType.RESPONSE) {
@@ -128,7 +128,7 @@ public class Proxy {
             }
 
             removeDeadStorages();
-            System.out.println("Количество живых хранилищ: " + storages.size());
+//            System.out.println("Количество живых хранилищ: " + storages.size());
         }
 
         context.destroySocket(frontend);
