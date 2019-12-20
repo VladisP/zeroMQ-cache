@@ -44,6 +44,10 @@ public class Proxy {
                 ZMsg msg = ZMsg.recvMsg(frontend);
                 String cmd = new String(msg.getLast().getData(), ZMQ.CHARSET);
                 CommandType cmdType = CommandService.getCommandType(cmd);
+
+                if (cmdType == CommandType.GET) {
+                    
+                }
             }
 
             if (items.pollin(1)) {
