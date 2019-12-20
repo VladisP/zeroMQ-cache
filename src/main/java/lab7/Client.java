@@ -3,6 +3,7 @@ package lab7;
 import org.zeromq.SocketType;
 import org.zeromq.ZContext;
 import org.zeromq.ZMQ;
+import org.zeromq.ZMsg;
 
 import java.util.Scanner;
 
@@ -45,7 +46,7 @@ public class Client {
 
                 socket.send(cmd, 0);
 //                String reply = socket.recvStr(0);
-                
+                ZMsg 
                 System.out.println(reply);
             }
         } finally {
