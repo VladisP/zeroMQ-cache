@@ -86,6 +86,7 @@ public class Proxy {
                 }
 
                 if (cmdType == CommandType.SET) {
+                    System.out.println(cmd); //del this
                     Integer key = CommandService.getKey(cmd);
                     boolean isKeyValid = sendSetRequest(key, msg);
 
