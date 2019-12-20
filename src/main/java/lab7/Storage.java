@@ -53,7 +53,7 @@ public class Storage {
                 if (cmdType == CommandType.GET) {
                     Integer key = CommandService.getKey(cmd);
                     Integer value = storage.get(key);
-
+                    String responseContent = value == null ? "null"
                     //TODO: add validation
                     msg.getLast().reset(Integer.toString(storage.get(key)));
                     msg.send(socket);
