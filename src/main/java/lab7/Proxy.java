@@ -3,10 +3,7 @@ package lab7;
 import javafx.util.Pair;
 import org.zeromq.*;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.function.BiConsumer;
 
 import static lab7.CommandService.*;
@@ -23,7 +20,7 @@ public class Proxy {
     }
 
     private static void removeDeadStorages() {
-         storages.entrySet().iterator();
+        Iterator<Map.Entry<String, StorageInfo>> storages.entrySet().iterator();
 
         storages.forEach((s, storageInfo) -> {
             if (storageInfo.isDead()) {
