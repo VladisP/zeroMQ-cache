@@ -41,10 +41,8 @@ public class Proxy {
             items.poll(Storage.HEARTBEAT_TIMEOUT);
 
             if (items.pollin(0)) {
-                //TODO: пока ничего
                 ZMsg msg = ZMsg.recvMsg(frontend);
-                System.out.println("LEN: " + msg.size());
-                System.out.println(msg.toString());
+                
             }
 
             if (items.pollin(1)) {
