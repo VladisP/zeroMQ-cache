@@ -36,6 +36,10 @@ public class Proxy {
         return false;
     }
 
+    private static boolean sendSetRequest(Integer key, ZMsg msg) {
+        
+    }
+
     public static void main(String[] args) {
         //TODO: try..catch
         ZContext context = new ZContext();
@@ -71,7 +75,7 @@ public class Proxy {
 
                 if (cmdType == CommandType.SET) {
                     Integer key = CommandService.getKey(cmd);
-                    
+                    //TODO
                 }
             }
 
