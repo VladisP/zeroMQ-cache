@@ -46,7 +46,7 @@ public class Client {
 
                 socket.send(cmd, 0);
 //                String reply = socket.recvStr(0);
-                ZMsg msg = ZMsg.recvMsg()
+                ZMsg msg = ZMsg.recvMsg(socket);
                 System.out.println(reply);
             }
         } finally {
