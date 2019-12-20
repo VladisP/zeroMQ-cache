@@ -38,7 +38,7 @@ public class Storage {
         System.out.println("Хранилище настроено");
 
         while (!Thread.currentThread().isInterrupted()) {
-            String cmd = socket.recvStr();
+            String cmd = socket.recvStr(ZMQ.DONTWAIT);
             System.out.println(cmd); //TODO: upd that later...
 
             if (System.currentTimeMillis() >= heartbeatTime) {
