@@ -50,7 +50,7 @@ public class Storage {
                 if (cmdType == CommandType.GET) {
                     System.out.println(cmd);
 
-                    msg.getLast().reset();
+                    msg.getLast().reset(storage.get());
                 }
             }
 
