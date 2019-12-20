@@ -45,7 +45,9 @@ public class Client {
                 frame.send(socket, 0);
 //                socket.send(cmd, 0);
 //                String reply = socket.recvStr(0);
+                System.out.println("kek");
                 ZMsg msg = ZMsg.recvMsg(socket);
+                System.out.println("lol");
                 System.out.println(new String(msg.getFirst().getData(), ZMQ.CHARSET));
             }
         } finally {
