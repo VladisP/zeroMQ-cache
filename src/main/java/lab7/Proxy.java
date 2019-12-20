@@ -48,7 +48,7 @@ public class Proxy {
 
         while (!Thread.currentThread().isInterrupted()) {
             System.out.println("iter");
-            items.poll();
+            items.poll(Storage.HEARTBEAT_TIMEOUT);
 
             if (items.pollin(0)) {
                 //TODO: пока ничего
