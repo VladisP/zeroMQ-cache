@@ -46,7 +46,7 @@ public class Proxy {
                 CommandType cmdType = CommandService.getCommandType(cmd);
 
                 if (cmdType == CommandType.GET) {
-                    
+                    Integer key = CommandService.parseGetCommand(cmd);
                 }
             }
 
