@@ -20,7 +20,11 @@ public class Proxy {
     }
 
     private static void removeDeadStorages() {
-        Iterator<Map.Entry<String, StorageInfo>> storages.entrySet().iterator();
+        Iterator<Map.Entry<String, StorageInfo>> iterator = storages.entrySet().iterator();
+
+        while (iterator.hasNext()) {
+            
+        }
 
         storages.forEach((s, storageInfo) -> {
             if (storageInfo.isDead()) {
