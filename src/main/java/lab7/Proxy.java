@@ -23,6 +23,8 @@ public class Proxy {
         storages.entrySet().removeIf(entry -> entry.getValue().isDead());
     }
 
+    private static boolean 
+
     public static void main(String[] args) {
         //TODO: try..catch
         ZContext context = new ZContext();
@@ -52,7 +54,7 @@ public class Proxy {
                     storages.forEach(new BiConsumer<String, StorageInfo>() {
                         @Override
                         public void accept(String s, StorageInfo storageInfo) {
-                            
+
                         }
                     });
                 }
