@@ -54,6 +54,10 @@ public class Storage {
                     msg.getLast().reset(Integer.toString(storage.get(key)));
                     msg.send(socket);
                 }
+
+                if (cmdType == CommandType.SET) {
+                    
+                }
             }
 
             if (System.currentTimeMillis() >= heartbeatTime) {
