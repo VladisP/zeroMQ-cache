@@ -45,9 +45,11 @@ public class Proxy {
             if (storageInfo.getStart() <= key && key <= storageInfo.getEnd()) {
                 storageInfo.getAddress().send(backend, ZFrame.REUSE + ZFrame.MORE);
                 msg.send(backend);
-                return true;
+                isKeyValid = true;
             }
         }
+
+        return isKeyValid;
     }
 
     public static void main(String[] args) {
