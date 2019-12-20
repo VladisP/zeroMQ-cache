@@ -10,7 +10,6 @@ import java.util.Map;
 public class Storage {
 
     public static final int HEARTBEAT_TIMEOUT = 3000;
-
     public static final String STORAGE_ADDRESS = "tcp://localhost:5556";
 
     private static void sendConnectCommand(ZMQ.Socket socket, int start, int end) {
