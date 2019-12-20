@@ -65,7 +65,7 @@ public class Proxy {
                     boolean isKeyValid = sendGetRequest(key, msg);
 
                     if (!isKeyValid) {
-                        //TODO: ругаемся
+                        CommandService.makeResponse()
                     }
                 }
             }

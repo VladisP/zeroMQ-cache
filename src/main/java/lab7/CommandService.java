@@ -61,4 +61,8 @@ public class CommandService {
 
         return Integer.parseInt(cmdParts[1]);
     }
+
+    public static String makeResponse(String response) {
+        return "RESPONSE: " + response;
+    }
 }
