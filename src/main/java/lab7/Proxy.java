@@ -23,7 +23,9 @@ public class Proxy {
         Iterator<Map.Entry<String, StorageInfo>> iterator = storages.entrySet().iterator();
 
         while (iterator.hasNext()) {
-            
+            if (iterator.next().getValue().isDead()) {
+                iterator.remove();
+            }
         }
 
         storages.forEach((s, storageInfo) -> {
