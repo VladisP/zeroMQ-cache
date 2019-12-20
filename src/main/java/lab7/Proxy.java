@@ -67,11 +67,16 @@ public class Proxy {
                 CommandType cmdType = CommandService.getCommandType(cmd);
 
                 if (cmdType == CommandType.CONNECT) {
+                    System.out.println("Хранилище зарегистрировано");
+
                     Pair<Integer, Integer> range = CommandService.parseConnectCommand(cmd);
+
                     storages.put(id, new StorageInfo(
                             address, range.getKey(), range.getValue(), System.currentTimeMillis()
                     ));
                 } else if (cmdType == CommandType.NOTIFY) {
+                    System.out.println("Обновление времени хартбита");
+
                     updateHeartbeatTime(id);
                 }
             }
