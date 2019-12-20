@@ -41,7 +41,7 @@ public class Storage {
 
         while (!Thread.currentThread().isInterrupted()) {
 //            String cmd = socket.recvStr(ZMQ.DONTWAIT);
-            ZMsg msg = 
+            ZMsg msg = ZMsg.recvMsg()
 
             if (cmd != null) {
                 CommandType cmdType = CommandService.getCommandType(cmd);
