@@ -11,7 +11,7 @@ public class CommandService {
     private static final Pattern EXIT_COMMAND_PATTERN = Pattern.compile("^F$", Pattern.CASE_INSENSITIVE);
     private static final Pattern CONNECT_COMMAND_PATTERN = Pattern.compile("^CONNECT \\d+ \\d+$", Pattern.CASE_INSENSITIVE);
     private static final Pattern NOTIFY_COMMAND_PATTERN = Pattern.compile("^NOTIFY$");
-    private static final String DELIMETER
+    private static final String DELIMITER = " ";
 
     public enum CommandType {
         GET,
@@ -47,7 +47,7 @@ public class CommandService {
     }
 
     private static String[] splitCmd(String cmd) {
-        return cmd.split(" ");
+        return cmd.split(DELIMITER);
     }
 
     public static Pair<Integer, Integer> parseConnectCommand(String cmd) {
@@ -57,6 +57,8 @@ public class CommandService {
     }
 
     public static Integer parseGetCommand(String cmd) {
-        String[] cmdParts = cmd.split(" ");
+        String[] cmdParts = splitCmd(cmd);
+
+        return Integer.parseInt(cmdParts[1]);
     }
 }

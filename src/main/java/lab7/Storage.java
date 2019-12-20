@@ -50,7 +50,8 @@ public class Storage {
                 if (cmdType == CommandType.GET) {
                     System.out.println(cmd);
 
-                    msg.getLast().reset(storage.get());
+                    Integer key = CommandService.parseGetCommand(cmd);
+                    msg.getLast().reset(storage.get(key));
                 }
             }
 
