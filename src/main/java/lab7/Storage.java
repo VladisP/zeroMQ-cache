@@ -51,7 +51,7 @@ public class Storage {
                 System.out.println(cmd);
 
                 if (cmdType == CommandType.GET) {
-                    Integer key = CommandService.parseGetCommand(cmd);
+                    Integer key = CommandService.getKey(cmd);
 
                     //TODO: add validation
                     msg.getLast().reset(Integer.toString(storage.get(key)));
@@ -59,7 +59,7 @@ public class Storage {
                 }
 
                 if (cmdType == CommandType.SET) {
-                    Pair<Integer, Integer> setParams = CommandService.parseKeyValueCommand(cmd);
+                    Pair<Integer, Integer> setParams = CommandService.getKeyValue(cmd);
 
                     storage.put(setParams.getKey(), setParams.getValue());
                     msg.destroy();
