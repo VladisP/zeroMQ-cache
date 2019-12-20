@@ -23,7 +23,7 @@ public class Proxy {
         storages.entrySet().removeIf(entry -> entry.getValue().isDead());
     }
 
-    private static boolean 
+    private static boolean makeGetRequest
 
     public static void main(String[] args) {
         //TODO: try..catch
