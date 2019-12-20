@@ -63,7 +63,7 @@ public class Storage {
                     Pair<Integer, Integer> setParams = CommandService.getKeyValue(cmd);
 
                     storage.put(setParams.getKey(), setParams.getValue());
-                    msg.destroy();
+//                    msg.destroy();
                 }
             }
 
