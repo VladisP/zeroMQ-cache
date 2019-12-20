@@ -70,7 +70,7 @@ public class Proxy {
                 }
 
                 if (cmdType == CommandType.SET) {
-
+                    
                 }
             }
 
