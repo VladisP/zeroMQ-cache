@@ -94,6 +94,7 @@ public class Proxy {
                             CommandService.makeResponse("указанная ячейка вне диапазона кеша");
 
                     ZMsg responseMsg = new ZMsg();
+                    responseMsg.add(new ZFrame(response))
                     msg.getLast().reset(response);
                     msg.send(frontend);
                 }
