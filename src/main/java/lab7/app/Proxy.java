@@ -30,7 +30,7 @@ public class Proxy {
 
             if (storageInfo.getStart() <= key && key <= storageInfo.getEnd()) {
                 storageInfo.getAddress().send(backend, ZFrame.REUSE + ZFrame.MORE);
-                msg.send(backend);
+                msg.send(backend, false);
                 return true;
             }
         }
@@ -46,7 +46,7 @@ public class Proxy {
 
             if (storageInfo.getStart() <= key && key <= storageInfo.getEnd()) {
                 storageInfo.getAddress().send(backend, ZFrame.REUSE + ZFrame.MORE);
-                msg.send(backend);
+                msg.send(backend, false);
                 isKeyValid = true;
             }
         }
