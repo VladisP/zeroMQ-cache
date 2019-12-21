@@ -12,7 +12,8 @@ import static lab7.helpers.CommandService.*;
 public class Proxy {
 
     //private static final List<StorageInfo> storages = new ArrayList<>();
-    private static final Map<String, StorageInfo> storages = new HashMap<>();
+//    private static final Map<String, StorageInfo> storages = new HashMap<>();
+    private static final List<StorageInfo> storageList = new ArrayList<>();
     private static ZMQ.Socket frontend;
     private static ZMQ.Socket backend;
 
