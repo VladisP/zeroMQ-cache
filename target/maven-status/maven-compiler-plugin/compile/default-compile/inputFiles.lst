@@ -1,5 +1,5 @@
-/home/vladislav/Labs/lab7/zeroMQ-cache/src/main/java/lab7/Client.java
-/home/vladislav/Labs/lab7/zeroMQ-cache/src/main/java/lab7/Storage.java
-/home/vladislav/Labs/lab7/zeroMQ-cache/src/main/java/lab7/Proxy.java
-/home/vladislav/Labs/lab7/zeroMQ-cache/src/main/java/lab7/CommandService.java
-/home/vladislav/Labs/lab7/zeroMQ-cache/src/main/java/lab7/StorageInfo.java
+/home/vladislav/Labs/lab7/zeroMQ-cache/src/main/java/lab7/app/Storage.java
+/home/vladislav/Labs/lab7/zeroMQ-cache/src/main/java/lab7/app/Proxy.java
+/home/vladislav/Labs/lab7/zeroMQ-cache/src/main/java/lab7/helpers/CommandService.java
+/home/vladislav/Labs/lab7/zeroMQ-cache/src/main/java/lab7/app/Client.java
+/home/vladislav/Labs/lab7/zeroMQ-cache/src/main/java/lab7/helpers/StorageInfo.java

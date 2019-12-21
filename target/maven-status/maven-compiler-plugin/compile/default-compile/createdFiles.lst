@@ -1,6 +1,6 @@
-lab7/Proxy.class
-lab7/Client.class
-lab7/CommandService.class
-lab7/StorageInfo.class
-lab7/Storage.class
-lab7/CommandService$CommandType.class
+lab7/app/Proxy.class
+lab7/helpers/CommandService$CommandType.class
+lab7/helpers/StorageInfo.class
+lab7/helpers/CommandService.class
+lab7/app/Client.class
+lab7/app/Storage.class
