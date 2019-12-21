@@ -1,11 +1,13 @@
-package lab7;
+package lab7.app;
 
 import javafx.util.Pair;
+import lab7.helpers.CommandService;
+import lab7.helpers.StorageInfo;
 import org.zeromq.*;
 
 import java.util.*;
 
-import static lab7.CommandService.*;
+import static lab7.helpers.CommandService.*;
 
 public class Proxy {
 

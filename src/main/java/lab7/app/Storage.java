@@ -1,6 +1,7 @@
-package lab7;
+package lab7.app;
 
 import javafx.util.Pair;
+import lab7.helpers.CommandService;
 import org.zeromq.SocketType;
 import org.zeromq.ZContext;
 import org.zeromq.ZMQ;
@@ -9,7 +10,7 @@ import org.zeromq.ZMsg;
 import java.util.HashMap;
 import java.util.Map;
 
-import static lab7.CommandService.*;
+import static lab7.helpers.CommandService.*;
 
 public class Storage {
 

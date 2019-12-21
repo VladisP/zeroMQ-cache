@@ -1,4 +1,4 @@
-package lab7;
+package lab7.helpers;
 
 import javafx.util.Pair;
 
@@ -43,7 +43,7 @@ public class CommandService {
     }
 
     public static String makeConnectCommand(int start, int end) {
-        return "CONNECT " + start + " " + end;
+        return "CONNECT" + DELIMITER + start + DELIMITER + end;
     }
 
     public static String makeNotifyCommand() {
@@ -51,7 +51,7 @@ public class CommandService {
     }
 
     public static String makeResponseCommand(String response) {
-        return "RESPONSE: " + response;
+        return "RESPONSE:" + DELIMITER + response;
     }
 
     private static String[] splitCmd(String cmd) {

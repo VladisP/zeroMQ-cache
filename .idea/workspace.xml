@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c94fa783-9990-4a9a-9c6f-f92d680dc5bf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lab7/Proxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab7/Proxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lab7/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab7/Storage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lab7/CommandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab7/helpers/CommandService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lab7/app/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab7/app/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lab7/app/Proxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab7/app/Proxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lab7/app/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab7/app/Storage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lab7/helpers/StorageInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab7/helpers/StorageInfo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +78,10 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="289" y="27" width="777" height="735" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1576925786052" />
+    <state x="328" y="133" width="710" height="528" key="find.popup" timestamp="1576925861638">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="328" y="133" width="710" height="528" key="find.popup/0.27.1366.741@0.27.1366.741" timestamp="1576925861638" />
     <state x="379" y="27" width="598" height="735" key="refactoring.ChangeSignatureDialog" timestamp="1576842539081">
       <screen x="0" y="27" width="1366" height="741" />
     </state>

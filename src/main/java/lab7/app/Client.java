@@ -1,10 +1,11 @@
-package lab7;
+package lab7.app;
 
+import lab7.helpers.CommandService;
 import org.zeromq.*;
 
 import java.util.Scanner;
 
-import static lab7.CommandService.*;
+import static lab7.helpers.CommandService.*;
 
 public class Client {
 

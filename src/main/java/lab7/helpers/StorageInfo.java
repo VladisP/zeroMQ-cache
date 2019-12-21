@@ -1,16 +1,15 @@
-package lab7;
+package lab7.helpers;
 
+import lab7.app.Storage;
 import org.zeromq.ZFrame;
 
 public class StorageInfo {
-    //    private String id;
     private ZFrame address;
     private int start;
     private int end;
     private long heartbeatTime;
 
-    public StorageInfo(/*String id, */ZFrame address, int start, int end, long heartbeatTime) {
-        //this.id = id;
+    public StorageInfo(ZFrame address, int start, int end, long heartbeatTime) {
         this.address = address;
         this.start = start;
         this.end = end;
