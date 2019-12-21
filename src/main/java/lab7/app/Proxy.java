@@ -11,8 +11,6 @@ import static lab7.helpers.CommandService.*;
 
 public class Proxy {
 
-    //private static final List<StorageInfo> storages = new ArrayList<>();
-//    private static final Map<String, StorageInfo> storages = new HashMap<>();
     private static final List<StorageInfo> storageList = new ArrayList<>();
     private static ZMQ.Socket frontend;
     private static ZMQ.Socket backend;
@@ -25,7 +23,7 @@ public class Proxy {
         }
     }
 
-    private static void removeDeadStorages() {
+    private static void removeDeadStorage() {
         storageList.removeIf(StorageInfo::isDead);
     }
 
@@ -133,7 +131,7 @@ public class Proxy {
                 }
             }
 
-            removeDeadStorages();
+            removeDeadStorage();
 //            System.out.println("Количество живых хранилищ: " + storages.size());
         }
 
