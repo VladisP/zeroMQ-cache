@@ -54,7 +54,6 @@ public class Proxy {
     }
 
     public static void main(String[] args) {
-        //TODO: try..catch
         ZContext context = new ZContext();
         frontend = context.createSocket(SocketType.ROUTER);
         backend = context.createSocket(SocketType.ROUTER);
@@ -87,7 +86,6 @@ public class Proxy {
                 }
 
                 if (cmdType == CommandType.SET) {
-                    System.out.println(cmd); //del this
                     Integer key = CommandService.getKey(cmd);
                     boolean isKeyValid = sendSetRequest(key, msg);
 
@@ -107,24 +105,18 @@ public class Proxy {
                 ZFrame address = msg.unwrap();
                 String id = new String(address.getData(), ZMQ.CHARSET);
 
-                //TODO: be careful!!!
-//                String cmd = new String(msg.getFirst().getData(), ZMQ.CHARSET);
                 String cmd = new String(msg.getLast().getData(), ZMQ.CHARSET);
                 CommandType cmdType = CommandService.getCommandType(cmd);
 
                 if (cmdType == CommandType.CONNECT) {
-                    System.out.println("Хранилище зарегистрировано");
-
-                    System.out.println("ID: " + id);
-
                     Pair<Integer, Integer> range = CommandService.getKeyValue(cmd);
 
                     storageList.add(new StorageInfo(
                             id, address, range.getKey(), range.getValue(), System.currentTimeMillis()
                     ));
-                } else if (cmdType == CommandType.NOTIFY) {
-//                    System.out.println("Обновление времени хартбита");
 
+                    System.out.println("Хранилище зарегистрировано");
+                } else if (cmdType == CommandType.NOTIFY) {
                     updateHeartbeatTime(id);
                 } else if (cmdType == CommandType.RESPONSE) {
                     msg.send(frontend);
@@ -132,7 +124,6 @@ public class Proxy {
             }
 
             removeDeadStorage();
-//            System.out.println("Количество живых хранилищ: " + storages.size());
         }
 
         context.destroySocket(frontend);

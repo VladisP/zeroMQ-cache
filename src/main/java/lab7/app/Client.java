@@ -20,39 +20,33 @@ public class Client {
 
     public static void main(String[] args) {
         ZContext context = new ZContext();
-        ZMQ.Socket socket = null;
+        ZMQ.Socket socket = context.createSocket(SocketType.REQ);
+        socket.connect(CLIENT_ADDRESS);
+
         Scanner in = new Scanner(System.in);
 
-        try {
-            socket = context.createSocket(SocketType.REQ);
-            socket.connect(CLIENT_ADDRESS);
+        System.out.println("Клиент готов к работе, для выхода press F");
 
-            System.out.println("Клиент готов к работе, для выхода press F");
+        while (true) {
+            String cmd = in.nextLine();
+            CommandType cmdType = CommandService.getCommandType(cmd);
 
-            while (true) {
-                String cmd = in.nextLine();
-                CommandType cmdType = CommandService.getCommandType(cmd);
-
-                if (cmdType == CommandType.EXIT) {
-                    break;
-                }
-
-                if (cmdType == CommandType.INVALID) {
-                    printHelpMessage();
-                    continue;
-                }
-
-//                ZFrame frame = new ZFrame(cmd);
-//                frame.send(socket, 0);
-                socket.send(cmd, 0);
-                String reply = socket.recvStr(0);
-//                ZMsg msg = ZMsg.recvMsg(socket);
-//                System.out.println(new String(msg.getFirst().getData(), ZMQ.CHARSET));
-                System.out.println(reply);
+            if (cmdType == CommandType.EXIT) {
+                break;
             }
-        } finally {
-            context.destroySocket(socket);
-            context.destroy();
+
+            if (cmdType == CommandType.INVALID) {
+                printHelpMessage();
+                continue;
+            }
+
+            socket.send(cmd, 0);
+            String reply = socket.recvStr(0);
+
+            System.out.println(reply);
         }
+
+        context.destroySocket(socket);
+        context.destroy();
     }
 }

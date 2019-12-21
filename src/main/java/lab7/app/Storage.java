@@ -26,7 +26,6 @@ public class Storage {
     }
 
     public static void main(String[] args) {
-        //TODO: try..catch
         Map<Integer, Integer> storage = new HashMap<>();
 
         ZContext context = new ZContext();
@@ -42,7 +41,6 @@ public class Storage {
         System.out.println("Хранилище настроено");
 
         while (!Thread.currentThread().isInterrupted()) {
-//            String cmd = socket.recvStr(ZMQ.DONTWAIT);
             ZMsg msg = ZMsg.recvMsg(socket, false);
 
             if (msg != null) {
@@ -69,8 +67,6 @@ public class Storage {
             }
 
             if (System.currentTimeMillis() >= heartbeatTime) {
-//                System.out.println("NOTIFY");
-
                 heartbeatTime = System.currentTimeMillis() + HEARTBEAT_TIMEOUT;
                 sendNotifyCommand(socket);
             }
