@@ -116,6 +116,8 @@ public class Proxy {
                 if (cmdType == CommandType.CONNECT) {
                     System.out.println("Хранилище зарегистрировано");
 
+                    System.out.println("ID: " + id);
+
                     Pair<Integer, Integer> range = CommandService.getKeyValue(cmd);
 
                     storages.put(id, new StorageInfo(
