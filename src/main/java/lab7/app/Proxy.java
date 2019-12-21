@@ -27,8 +27,8 @@ public class Proxy {
 
     private static void removeDeadStorages() {
         for (StorageInfo storageInfo: storageList) {
-            if () {
-
+            if (storageInfo.isDead()) {
+                storageList.remove()
             }
         }
         storages.entrySet().removeIf(entry -> entry.getValue().isDead());
