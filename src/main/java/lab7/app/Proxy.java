@@ -44,6 +44,8 @@ public class Proxy {
         for (Map.Entry<String, StorageInfo> entry : storages.entrySet()) {
             StorageInfo storageInfo = entry.getValue();
 
+            System.out.println(storageInfo.getStart());
+
             if (storageInfo.getStart() <= key && key <= storageInfo.getEnd()) {
                 System.out.println("aaa");
                 storageInfo.getAddress().send(backend, ZFrame.REUSE + ZFrame.MORE);
