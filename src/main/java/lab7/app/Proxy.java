@@ -26,12 +26,7 @@ public class Proxy {
     }
 
     private static void removeDeadStorages() {
-        for (StorageInfo storageInfo: storageList) {
-            if (storageInfo.isDead()) {
-                storageList.remove()
-            }
-        }
-        storages.entrySet().removeIf(entry -> entry.getValue().isDead());
+        storageList.removeIf(StorageInfo::isDead);
     }
 
     private static boolean sendGetRequest(Integer key, ZMsg msg) {
