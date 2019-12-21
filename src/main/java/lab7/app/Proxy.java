@@ -45,6 +45,7 @@ public class Proxy {
             StorageInfo storageInfo = entry.getValue();
 
             if (storageInfo.getStart() <= key && key <= storageInfo.getEnd()) {
+                System.out.println("aaaaaa");
                 storageInfo.getAddress().send(backend, ZFrame.REUSE + ZFrame.MORE);
                 msg.send(backend, false);
                 isKeyValid = true;
