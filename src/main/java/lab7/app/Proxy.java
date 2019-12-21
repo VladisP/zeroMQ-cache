@@ -134,7 +134,7 @@ public class Proxy {
             }
 
             removeDeadStorages();
-            System.out.println("Количество живых хранилищ: " + storages.size());
+//            System.out.println("Количество живых хранилищ: " + storages.size());
         }
 
         context.destroySocket(frontend);
