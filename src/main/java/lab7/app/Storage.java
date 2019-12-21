@@ -15,7 +15,7 @@ public class Storage {
     public static final String STORAGE_ADDRESS = "tcp://localhost:5556";
 
     private static void sendConnectCommand(ZMQ.Socket socket, int start, int end) {
-        new ZFrame(makeConnectCommand(start, end))
+        new ZFrame(makeConnectCommand(start, end)).send(socket)
         //        socket.send(makeConnectCommand(start, end), 0);
     }
 
