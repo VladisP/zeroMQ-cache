@@ -2,10 +2,7 @@ package lab7.app;
 
 import javafx.util.Pair;
 import lab7.helpers.CommandService;
-import org.zeromq.SocketType;
-import org.zeromq.ZContext;
-import org.zeromq.ZMQ;
-import org.zeromq.ZMsg;
+import org.zeromq.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -18,7 +15,8 @@ public class Storage {
     public static final String STORAGE_ADDRESS = "tcp://localhost:5556";
 
     private static void sendConnectCommand(ZMQ.Socket socket, int start, int end) {
-        socket.send(makeConnectCommand(start, end), 0);
+        new ZFrame(makeConnectCommand(start, end))
+        //        socket.send(makeConnectCommand(start, end), 0);
     }
 
     private static void sendNotifyCommand(ZMQ.Socket socket) {
