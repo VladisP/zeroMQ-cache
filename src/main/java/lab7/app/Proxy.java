@@ -118,6 +118,8 @@ public class Proxy {
 
                     Pair<Integer, Integer> range = CommandService.getKeyValue(cmd);
 
+                    System.out.println(range.getKey() + " " + range.getValue());
+
                     storages.put(id, new StorageInfo(
                             address, range.getKey(), range.getValue(), System.currentTimeMillis()
                     ));
