@@ -18,10 +18,19 @@ public class Proxy {
     private static ZMQ.Socket backend;
 
     private static void updateHeartbeatTime(String id) {
-        storages.get(id).setHeartbeatTime(System.currentTimeMillis());
+        for (StorageInfo storageInfo : storageList) {
+            if (storageInfo.getId().equals(id)) {
+                storageInfo.setHeartbeatTime(System.currentTimeMillis());
+            }
+        }
     }
 
     private static void removeDeadStorages() {
+        for (StorageInfo storageInfo: storageList) {
+            if () {
+
+            }
+        }
         storages.entrySet().removeIf(entry -> entry.getValue().isDead());
     }
 
@@ -121,8 +130,8 @@ public class Proxy {
 
                     Pair<Integer, Integer> range = CommandService.getKeyValue(cmd);
 
-                    storages.put(id, new StorageInfo(
-                            address, range.getKey(), range.getValue(), System.currentTimeMillis()
+                    storageList.add(new StorageInfo(
+                            id, address, range.getKey(), range.getValue(), System.currentTimeMillis()
                     ));
                 } else if (cmdType == CommandType.NOTIFY) {
 //                    System.out.println("Обновление времени хартбита");
