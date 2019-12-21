@@ -44,10 +44,7 @@ public class Proxy {
         for (Map.Entry<String, StorageInfo> entry : storages.entrySet()) {
             StorageInfo storageInfo = entry.getValue();
 
-            System.out.println(storageInfo.getStart());
-
             if (storageInfo.getStart() <= key && key <= storageInfo.getEnd()) {
-                System.out.println("aaa");
                 storageInfo.getAddress().send(backend, ZFrame.REUSE + ZFrame.MORE);
                 msg.send(backend, false);
                 isKeyValid = true;
@@ -121,8 +118,6 @@ public class Proxy {
 
                     Pair<Integer, Integer> range = CommandService.getKeyValue(cmd);
 
-                    System.out.println("ID: " + id);
-
                     storages.put(id, new StorageInfo(
                             address, range.getKey(), range.getValue(), System.currentTimeMillis()
                     ));
@@ -136,7 +131,7 @@ public class Proxy {
             }
 
             removeDeadStorages();
-//            System.out.println("Количество живых хранилищ: " + storages.size());
+            System.out.println("Количество живых хранилищ: " + storages.size());
         }
 
         context.destroySocket(frontend);
